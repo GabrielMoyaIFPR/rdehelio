@@ -19,8 +19,8 @@ export default function Login({ navigation }){
         })
     },[]);
 
-    async function handleLogin(){
-        const response = await api.post('/devs', { user: username } );
+    async function handleLogin(user){
+        const response = await api.post('/devs', { user} );
 
         const { _id } = response.data;
 
